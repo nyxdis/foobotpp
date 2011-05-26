@@ -22,13 +22,14 @@
 class Protocol
 {
 	public:
+		virtual ~Protocol() {}
 		virtual bool connect() = 0;
 		virtual void postConnect() = 0;
 		virtual void join() = 0;
-		virtual void send() = 0;
-		virtual void say() = 0;
-		virtual void notice() = 0;
-		virtual void act() = 0;
+		virtual void send() const = 0;
+		virtual void say() const = 0;
+		virtual void notice() const = 0;
+		virtual void act() const = 0;
 		virtual void quit() = 0;
 };
 

@@ -24,14 +24,14 @@
 class IRC : public Protocol
 {
 	public:
-		bool connect() = 0;
-		void postConnect() = 0;
-		void join() = 0;
-		void send() = 0;
-		void say() = 0;
-		void notice() = 0;
-		void act() = 0;
-		void quit() = 0;
+		bool connect();
+		void postConnect();
+		void join();
+		void send() const;
+		void say() const;
+		void notice() const;
+		void act() const;
+		void quit();
 };
 
 #endif // HAVE_IRC_H

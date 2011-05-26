@@ -37,19 +37,19 @@ void IRC::join()
 {
 }
 
-void IRC::send()
+void IRC::send() const
 {
 }
 
-void IRC::say()
+void IRC::say() const
 {
 }
 
-void IRC::notice()
+void IRC::notice() const
 {
 }
 
-void IRC::act()
+void IRC::act() const
 {
 }
 

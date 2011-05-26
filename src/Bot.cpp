@@ -25,6 +25,7 @@
 #include <sys/stat.h>
 
 #include "Bot.h"
+#include "IRC.h"
 #include "Settings.h"
 
 Bot::Bot(void)
@@ -90,6 +91,7 @@ void Bot::getAlias(void)
 
 bool Bot::connect(void)
 {
+	protocol = new IRC();
 	log(DEBUG, "Connecting");
 	// open socket
 	socket = 0;
