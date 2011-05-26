@@ -1,3 +1,6 @@
+#ifndef HAVE_IRC_H
+#define HAVE_IRC_H
+
 #include "Protocol.h"
 
 class IRC : public Protocol
@@ -12,3 +15,5 @@ class IRC : public Protocol
 		void act() = 0;
 		void quit() = 0;
 };
+
+#endif // HAVE_IRC_H

@@ -1,3 +1,6 @@
+#ifndef HAVE_DB_H
+#define HAVE_DB_H
+
 class Db {
 	private:
 		void *instance;
@@ -11,3 +14,5 @@ class Db {
 		void getSingleProperty(void);
 		void quote(void);
 };
+
+#endif // HAVE_DB_H

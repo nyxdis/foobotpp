@@ -1,3 +1,6 @@
+#ifndef HAVE_PLUGINS_H
+#define HAVE_PLUGINS_H
+
 class Plugins {
 	private:
 		void *loaded;
@@ -20,3 +23,5 @@ class Plugins {
 		void registerHelp(void);
 		void getHelp(void);
 };
+
+#endif // HAVE_PLUGINS_H

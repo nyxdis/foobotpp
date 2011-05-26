@@ -1,3 +1,6 @@
+#ifndef HAVE_USER_H
+#define HAVE_USER_H
+
 class User {
 	private:
 		void *id;
@@ -15,3 +18,5 @@ class User {
 		void get(void);
 		void set(void);
 };
+
+#endif // HAVE_USER_H

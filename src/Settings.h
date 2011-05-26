@@ -1,3 +1,6 @@
+#ifndef HAVE_SETTINGS_H
+#define HAVE_SETTINGS_H
+
 #include <string>
 
 
@@ -27,3 +30,5 @@ class Settings {
 		static void load(void);
 		static std::string get(std::string);
 };
+
+#endif // HAVE_SETTINGS_H

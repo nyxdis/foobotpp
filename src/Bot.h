@@ -1,3 +1,6 @@
+#ifndef HAVE_BOT_H
+#define HAVE_BOT_H
+
 #include <fstream>
 
 #include "Protocol.h"
@@ -45,3 +48,5 @@ class Bot {
 		void act(void);
 		void shutdown(void);
 };
+
+#endif // HAVE_BOT_H

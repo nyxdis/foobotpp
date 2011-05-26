@@ -1,3 +1,6 @@
+#ifndef HAVE_PROTOCOL_H
+#define HAVE_PROTOCOL_H
+
 class Protocol
 {
 	public:
@@ -10,3 +13,5 @@ class Protocol
 		virtual void act() = 0;
 		virtual void quit() = 0;
 };
+
+#endif // HAVE_PROTOCOL_H
