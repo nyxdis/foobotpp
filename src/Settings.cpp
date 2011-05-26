@@ -1,5 +1,7 @@
 #include <string>
 
+#include <giomm.h>
+
 #include "Settings.h"
 
 void Settings::load(void)

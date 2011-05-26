@@ -8,3 +8,6 @@ foobot_SOURCES = src/foobot.cpp \
 		 src/Protocol.h \
 		 src/Settings.cpp src/Settings.h \
 		 src/User.cpp src/User.h
+
+foobot_LDADD = $(glibmm_LIBS)
+foobot_CXXFLAGS = $(glibmm_CFLAGS)

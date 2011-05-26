@@ -1,12 +1,18 @@
 #include <iostream>
 
+#include <glibmm.h>
+
 #include "Settings.h"
 #include "Plugins.h"
 #include "Bot.h"
 #include "User.h"
 
+Glib::RefPtr<Glib::MainLoop> loop;
+
 int main(void)
 {
+	loop = Glib::MainLoop::create();
+
 	// load settings
 	Settings::load();
 	// load plugins

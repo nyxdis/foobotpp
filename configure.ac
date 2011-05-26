@@ -11,12 +11,8 @@ AM_INIT_AUTOMAKE([foreign])
 AC_PROG_CXX
 
 # Checks for libraries.
-
-# Checks for header files.
-
-# Checks for typedefs, structures, and compiler characteristics.
-
-# Checks for library functions.
+PKG_PROG_PKG_CONFIG([0.24])
+PKG_CHECK_MODULES([glibmm], [glibmm-2.4])
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
