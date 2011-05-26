@@ -13,6 +13,7 @@ AC_PROG_CXX
 # Checks for libraries.
 PKG_PROG_PKG_CONFIG([0.24])
 PKG_CHECK_MODULES([glibmm], [glibmm-2.4])
+PKG_CHECK_MODULES([giomm], [giomm-2.4])
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
