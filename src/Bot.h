@@ -1,5 +1,7 @@
 #include <fstream>
 
+#include "Protocol.h"
+
 enum log_level {
 	DEBUG,
 	INFO,
@@ -13,7 +15,7 @@ class Bot {
 		bool connected;
 		void *channel;
 		void *usr;
-		void *protocol;
+		Protocol *protocol;
 		void *channels;
 		void *socket;
 		std::ofstream logFp;

@@ -76,15 +76,9 @@ bool Bot::connect(void)
 	// open socket
 	socket = 0;
 	if (!socket)
-		return true;
-	// connect
-	// send USER
-	// send NICK
-	// check for 001
-	// log(DEBUG, "Connected");
-	// connected = true;
-	// return true;
-	return false;
+		return false;
+	// connect socket
+	return protocol->connect();
 }
 
 void Bot::postConnect(void)
