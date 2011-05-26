@@ -123,9 +123,10 @@ void Bot::log(log_level level, std::string message)
 	strftime(ts, sizeof ts, "%Y-%m-%d %H:%M", localtime(&now));
 	tmp = ts;
 	tmp += ": " + message;
-	std::cout << tmp << std::endl;
-	std::cerr << __func__ <<  ": Not implemented\n";
-	exit(EXIT_FAILURE);
+	if (logFp.is_open())
+		logFp << tmp << std::endl;
+	else
+		std::cout << tmp << std::endl;
 }
 
 void Bot::logCmd(void)
