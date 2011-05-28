@@ -22,6 +22,7 @@
 #include <fstream>
 
 #include "Protocol.h"
+#include "Settings.h"
 
 enum log_level {
 	DEBUG,
@@ -66,5 +67,7 @@ class Bot {
 		void act(void);
 		void shutdown(void);
 };
+
+extern Settings *settings;
 
 #endif // HAVE_BOT_H

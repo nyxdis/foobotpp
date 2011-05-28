@@ -17,16 +17,37 @@
 
 
 #include <string>
+#include <iostream>
 
 #include <giomm.h>
 
 #include "Settings.h"
 
-void Settings::load(void)
+Settings::Settings()
 {
+	// TODO support alternative filenames
+	group = "foobot";
+	config.load_from_file("foobot.conf");
 }
 
-std::string Settings::get(std::string prop)
+gint Settings::get_int(const gchar* prop)
 {
-	return prop;
+	gint result = 0;
+	try {
+		result = config.get_integer(group, prop);
+	} catch (Glib::KeyFileError &err) {
+		std::cerr << "Failed to read: " << err.what() << std::endl;
+	}
+	return result;
+}
+
+std::string Settings::get_string(const gchar* prop)
+{
+	std::string result;
+	try {
+		result = config.get_string(group, prop);
+	} catch (Glib::KeyFileError &err) {
+		std::cerr << "Failed to read: " << err.what() << std::endl;
+	}
+	return result;
 }

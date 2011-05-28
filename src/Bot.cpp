@@ -20,7 +20,6 @@
 #include <errno.h>
 #include <fstream>
 #include <iostream>
-#include <stdio.h>
 #include <string>
 #include <sys/stat.h>
 
@@ -41,7 +40,7 @@ Bot::Bot(void)
 
 void Bot::openLog(void)
 {
-	std::string filename = "logs/" + Settings::get("network") + ".log";
+	std::string filename = "logs/" + settings->get_string("network") + ".log";
 	logFp.open(filename.c_str(), std::ios_base::app);
 	if (!logFp.is_open()) {
 		std::cerr << "Failed to open log file\n";

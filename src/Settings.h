@@ -21,32 +21,18 @@
 
 #include <string>
 
+#include <giomm.h>
+
 
 class Settings {
 	private:
-		void *command_char;
-		void *protocol;
-		void *nick;
-		void *username;
-		void *realname;
-		void *server;
-		void *port;
-		void *network;
-		void *channels;
-		void *authpass;
-		void *authnick;
-		void *authserv;
-		void *authcmd;
-		void *debug_mode;
-		void *debug_channel;
-		void *mainChannel;
-		void *listenAddr;
-		void *dccPort;
-		void *pluginBlacklist;
+		Glib::KeyFile config;
+		Glib::ustring group;
 
 	public:
-		static void load(void);
-		static std::string get(std::string);
+		Settings();
+		gint get_int(const gchar*);
+		std::string get_string(const gchar*);
 };
 
 #endif // HAVE_SETTINGS_H

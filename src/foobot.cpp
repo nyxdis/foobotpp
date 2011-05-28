@@ -26,13 +26,13 @@
 #include "User.h"
 
 Glib::RefPtr<Glib::MainLoop> loop;
+Settings *settings;
 
 int main(void)
 {
 	loop = Glib::MainLoop::create();
+	settings = new Settings;
 
-	// load settings
-	Settings::load();
 	// load plugins
 	// initialize bot
 	Bot *bot = new Bot;
