@@ -1,13 +1,13 @@
 bin_PROGRAMS =	foobot
 
-foobot_SOURCES = src/foobot.cpp \
-		 src/Bot.cpp src/Bot.h \
-		 src/Db.cpp src/Db.h \
-		 src/IRC.h src/IRC.cpp \
-		 src/Plugins.cpp src/Plugins.h \
+foobot_SOURCES = src/foobot.cc \
+		 src/Bot.cc src/Bot.h \
+		 src/Db.cc src/Db.h \
+		 src/IRC.h src/IRC.cc \
+		 src/Plugins.cc src/Plugins.h \
 		 src/Protocol.h \
-		 src/Settings.cpp src/Settings.h \
-		 src/User.cpp src/User.h
+		 src/Settings.cc src/Settings.h \
+		 src/User.cc src/User.h
 
 foobot_LDADD = $(glibmm_LIBS) \
 	       $(giomm_LIBS)
